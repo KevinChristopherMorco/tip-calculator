@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --strong-cyan: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+    --red: hsl(4, 100%, 35%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Space Mono", monospace;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-grayish-cyan);
+}
+
+header {
+    font-size: 1.25rem;
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 0.5rem;
+    color: var(--very-dark-cyan);
+}
+
+main {
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--white);
+}
+
+label,
+.heading {
+    padding: 0.5rem 0;
+    font-weight: 700;
+    color: var(--dark-grayish-cyan);
+}
+
+.main__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-container .bill__main-wrapper .bill__input-container {
+    padding: 2rem 0;
+}
+
+.content-container .bill__main-wrapper .bill__input-container>label {
+    padding: 0.5rem 0;
+    display: block;
+}
+
+.content-container .bill__main-wrapper .bill__input-container .bill__input-icon-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: var(--very-light-grayish-cyan);
+}
+
+.content-container .bill__main-wrapper .bill__input-container .bill__input-icon-container>input {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: right;
+    background-color: var(--very-light-grayish-cyan);
+    color: var(--very-dark-cyan);
+}
+
+.content-container .bill__main-wrapper .bill__input-container .bill__input-icon-container>input:focus {
+    border: 2px solid var(--strong-cyan);
+    outline: none;
+}
+
+.content-container .bill__main-wrapper .bill__input-container .bill__input-icon-container .bill__icon {
+    position: absolute;
+    left: 10px;
+    background-image: url('../../images/icon-dollar.svg');
+    height: 30px;
+    width: 30px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.content-container .bill__main-wrapper:nth-of-type(3) .bill__input-container .bill__input-icon-container .bill__icon {
+    background-image: url('../../images/icon-person.svg');
+}
+
+.bill__label-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bill__label-container>p {
+    display: none;
+    color: var(--red);
+}
+
+.bill__label-container>p.error {
+    display: block;
+}
+
+.tip__main-wrapper {
+    padding: 1.5rem 0;
+}
+
+.tip__main-wrapper .tip__card-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.tip__main-wrapper .tip__card-container>button,
+.tip__main-wrapper .tip__card-container>input {
+    width: 40%;
+    padding: 0.5rem 0;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    text-align: center;
+    background-color: var(--very-dark-cyan);
+    color: var(--white);
+    cursor: pointer;
+}
+
+
+.tip__main-wrapper .tip__card-container>button.active {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
+.tip__main-wrapper .tip__card-container>input {
+    font-weight: 600;
+    background-color: var(--very-light-grayish-cyan);
+    color: var(--very-dark-cyan);
+}
+
+.summary__main-wrapper {
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--very-dark-cyan);
+}
+
+.summary__main-wrapper .summary__breakdown-container {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary__main-wrapper .summary__breakdown-container .summary__about-container>p {
+    font-size: 1.10rem;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.summary__main-wrapper .summary__breakdown-container .summary__about-container>p:nth-of-type(2) {
+    font-size: 1rem;
+    color: var(--grayish-cyan);
+}
+
+.summary__main-wrapper .summary__breakdown-container .summary__total-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.summary__main-wrapper .summary__breakdown-container .summary__total-container .bill__icon {
+    background-image: url('../../images/icon-dollar-total.svg');
+    color: var(--strong-cyan);
+    height: 30px;
+    width: 30px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.summary__main-wrapper .summary__breakdown-container .summary__total-container>p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--strong-cyan)
+}
+
+.summary__button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.summary__main-wrapper .summary__button-container>button {
+    width: 90%;
+    padding: 0.5rem;
+    border: none;
+    font-size: 1.25rem;
+    font-weight: bolder;
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+
+
+
+footer .attribution {
+    width: 100%;
+    font-size: 11px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1600px) {
+
+    main {
+        width: 80%;
+        padding: 2rem;
+        border-radius: 1.5rem;
+    }
+
+    .content-container {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+
+    .bill-tip__wrapper {
+        width: 45%;
+    }
+
+    .summary__wrapper {
+        width: 45%;
+    }
+
+    .summary__main-wrapper {
+        height: 100%;
+        padding: 3rem;
+        position: relative;
+    }
+
+    .summary__button-container {
+        width: 100%;
+        position: absolute;
+        top: 90%;
+        left: 0;
+        transform: translate(0, -90%);
+    }
+
+    .summary__main-wrapper .summary__button-container>button {
+        width: 50%;
+    }
+
+
+
+}
+
+@media only screen and (min-width: 1920px) {
+    header{
+        position: absolute;
+        top: 100px;
+        left: 50%;
+    }
+    main {
+        width: 70%;
+        padding: 2rem;
+        border-radius: 1.5rem;
+    }
+
+    .main__container {
+        height: 100%;
+    }
+
+    .content-container {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+
+    .bill-tip__wrapper {
+        width: 45%;
+    }
+
+    .summary__wrapper {
+        width: 45%;
+    }
+
+    .summary__main-wrapper {
+        height: 100%;
+        padding: 3rem;
+        position: relative;
+    }
+
+    .summary__main-wrapper .summary__breakdown-container .summary__about-container>p {
+        font-size: 1.5rem;
+    }
+
+    .summary__main-wrapper .summary__breakdown-container .summary__about-container>p:nth-of-type(2) {
+        font-size: 1.25rem;
+    }
+
+    .summary__main-wrapper .summary__breakdown-container .summary__total-container .bill__icon {
+        height: 40px;
+        width: 40px;
+        background-size: 40px 40px;
+    }
+
+    .summary__main-wrapper .summary__breakdown-container .summary__total-container {
+        width: 40%;
+    }
+
+    .summary__main-wrapper .summary__breakdown-container .summary__total-container>p {
+        font-size: 3.5rem;
+    }
+
+    .summary__button-container {
+        width: 100%;
+        position: absolute;
+        top: 90%;
+        left: 0;
+        transform: translate(0, -90%);
+    }
+
+    .summary__main-wrapper .summary__button-container>button {
+        width: 50%;
+    }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/css/custom-css.css">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+
+</head>
+
+<body>
+  <header>
+    <p>SPLI</p>
+    <p>TTER</p>
+  </header>
+
+  <div class="main__container">
+    <main>
+      <div class="content-container">
+        <div class="bill-tip__wrapper">
+          <div class="bill__main-wrapper">
+            <div class="bill__input-container">
+              <label for="bill-input">Bill</label>
+              <div class="bill__input-icon-container">
+                <div class="bill__icon"></div>
+                <input type="number" name="" id="bill-input" placeholder="0">
+              </div>
+            </div>
+          </div>
+          <div class="tip__main-wrapper">
+            <p class="heading">Select Tip %</p>
+            <div class="tip__card-container">
+              <button class="tip__card" value=".05">5%</button>
+              <button class="tip__card" value=".1">10%</button>
+              <button class="tip__card" value=".15">15%</button>
+              <button class="tip__card" value=".25">25%</button>
+              <button class="tip__card" value=".50">50%</button>
+              <input class="tip__card" type="number" id="custom-tip" placeholder="Custom">
+            </div>
+          </div>
+          <div class="bill__main-wrapper">
+            <div class="bill__input-container">
+              <div class="bill__label-container">
+                <label for="people-input">Number of People</label>
+                <p>Can't be Zero</p>
+              </div>
+              <div class="bill__input-icon-container">
+                <div class="bill__icon"></div>
+                <input type="number" name="" id="people-input" placeholder="0">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="summary__wrapper">
+          <div class="summary__main-wrapper">
+            <div class="summary__breakdown-container">
+              <div class="summary__about-container">
+                <p>Tip Amount</p>
+                <p>/person</p>
+              </div>
+              <div class="summary__total-container">
+                <div class="bill__icon">
+                </div>
+                <p class="summary__tip-display">0.00</p>
+
+              </div>
+            </div>
+
+            <div class="summary__breakdown-container">
+              <div class="summary__about-container">
+                <p>Total</p>
+                <p>/person</p>
+              </div>
+              <div class="summary__total-container">
+                <div class="bill__icon">
+                </div>
+                <p class="summary__total-display">0.00</p>
+              </div>
+            </div>
+            <div class="summary__button-container">
+              <button id="reset">RESET</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://kevinchristophermorco.github.io/">Kevin Christopher Morco</a>
+    </div>
+  </footer>
+  <script src="assets/js/custom-js.js"></script>
+</body>
+
+</html>
